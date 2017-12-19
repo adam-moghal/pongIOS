@@ -62,16 +62,11 @@ class GameScene: SKScene {
         if playerWhoWon == main{
             score[0] += 1
             ball.physicsBody?.applyImpulse(CGVector(dx: -15, dy: -15))
-
-        
         }
         else if playerWhoWon == enemy{
             score[1] += 1
             ball.physicsBody?.applyImpulse(CGVector(dx: 15, dy: 15))
-
         }
-     
-        
         topLabel.text = "\(score[1])"
         bottomLabel.text = "\(score[0])"
     }
@@ -120,15 +115,11 @@ class GameScene: SKScene {
 
             }
         }
-
-        
-        
     }
     
     
     override func update(_ currentTime: TimeInterval) {
         //moves enemy paddle to direction of ball witha  delay
-
         
         switch currentGameType{
             
